@@ -1,0 +1,75 @@
+[
+  {
+    "id": 1,
+    "name": "Frontlines Edutech",
+    "location": "Hyderabad,somajiguda",
+    "industry": "Software"
+  },
+  {
+    "id": 2,
+    "name": "TechCorp",
+    "location": "Bangalore",
+    "industry": "Software"
+  },
+  {
+    "id": 3,
+    "name": "FinServe",
+    "location": "Mumbai",
+    "industry": "Finance"
+  },
+  {
+    "id": 4,
+    "name": "HealthPlus",
+    "location": "Hyderabad",
+    "industry": "Healthcare"
+  },
+  {
+    "id": 5,
+    "name": "GreenTech Innovations",
+    "location": "Pune",
+    "industry": "Environmental"
+  },
+  {
+    "id": 6,
+    "name": "DataBridge Analytics",
+    "location": "Chennai",
+    "industry": "Data Science"
+  },
+  {
+    "id": 7,
+    "name": "Urban InfraTech",
+    "location": "Delhi",
+    "industry": "Infrastructure"
+  },
+  {
+    "id": 8,
+    "name": "EduSpark Solutions",
+    "location": "Bangalore",
+    "industry": "Education"
+  },
+  {
+    "id": 9,
+    "name": "MediCare Systems",
+    "location": "Mumbai",
+    "industry": "Healthcare"
+  },
+  {
+    "id": 10,
+    "name": "AgriGrowth Partners",
+    "location": "Chennai",
+    "industry": "Agriculture"
+  },
+  {
+    "id": 11,
+    "name": "FinTech Innovations",
+    "location": "Hyderabad",
+    "industry": "Finance"
+  },
+  {
+    "id": 12,
+    "name": "EcoSolutions",
+    "location": "Pune",
+    "industry": "Environmental"
+  }
+ 
+]
