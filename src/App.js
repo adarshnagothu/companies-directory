@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Container, Grid, Typography, CircularProgress, Alert, Box } from "@mui/material";
 import CompanyCard from "./CompanyCard";
 import Filter from "./Filter";
-import companiesData from "./companies.json";
+//import companiesData from "./companies.json";
 
 function App() {
   const [companies, setCompanies] = useState([]);
@@ -15,15 +15,22 @@ function App() {
   const [sortOrder, setSortOrder] = useState("asc");
 
   useEffect(() => {
-    try {
-      setTimeout(() => {
-        setCompanies(companiesData);
+    // Fetch companies.json from public folder
+    fetch("/companies.json")
+      .then(res => {
+        if (!res.ok) {
+          throw new Error("Failed to fetch data");
+        }
+        return res.json();
+      })
+      .then(data => {
+        setCompanies(data);
         setLoading(false);
-      }, 500);
-    } catch (err) {
-      setError("Failed to load companies");
-      setLoading(false);
-    }
+      })
+      .catch(err => {
+        setError(err.message);
+         setLoading(false);
+      });
   }, []);
 
   const locations = [...new Set(companies.map(c => c.location))];
@@ -33,7 +40,7 @@ function App() {
     .filter(c => c.name.toLowerCase().includes(search.toLowerCase()))
     .filter(c => selectedLocation ? c.location === selectedLocation : true)
     .filter(c => selectedIndustry ? c.industry === selectedIndustry : true)
-    .sort((a, b) => {
+    .sort((a, b) => { 
       if (sortOrder === "asc") return a.name.localeCompare(b.name);
       else return b.name.localeCompare(a.name);
     });
